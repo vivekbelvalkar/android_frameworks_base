@@ -1006,6 +1006,13 @@
             android:name="com.android.systemui.keyguard.CustomizationProvider"
             android:exported="true"
             android:permission="android.permission.CUSTOMIZE_SYSTEM_UI"
-            />
+	    />
+
+        <receiver android:name="com.android.settingslib.wifi.WifiTimeoutReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.wifi.intent.TIMEOUT" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
